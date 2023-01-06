@@ -15,23 +15,30 @@ let productB = {
 let salesEl = document.getElementById('sales-counter');
 let totalSalesEl = document.getElementById('total-sales');
 let totalRevenueEl = document.getElementById('revenue');
+let totalCommEl = document.getElementById('comission');
 
 let totalSales = 0;
 let totalRevenue = 0;
+let totalCommision = 0;
 let productASales = [];
 let productBSales = [];
 
-function addProdA() {
+function renderNewSale() {
   addRevenue();
   updateTotalSales();
-  salesEl.textContent += productA.emoji;
-  productASales.push(productA.emoji);
+  addToCounter();
+  addCommission();
+  console.log(event.target.id);
 }
 
-function addProdB() {
-  updateTotalSales();
-  salesEl.textContent += productB.emoji;
-  productBSales.push(productB.emoji);
+function addToCounter() {
+  if (event.target.id === 'prodA') {
+    salesEl.textContent += productA.emoji;
+    productASales.push(productB.emoji);
+  } else {
+    salesEl.textContent += productB.emoji;
+    productBSales.push(productB.emoji);
+  }
 }
 
 function updateTotalSales() {
@@ -40,6 +47,21 @@ function updateTotalSales() {
 }
 
 function addRevenue() {
-  totalRevenue += productA.revenue;
+  if (event.target.id === 'prodA') {
+    totalRevenue += productA.revenue;
+  } else {
+    totalRevenue += productB.revenue;
+  }
+
   totalRevenueEl.textContent = `$ ${totalRevenue}`;
+}
+
+function addCommission() {
+  if (event.target.id === 'prodA') {
+    totalCommision += productA.commision;
+  } else {
+    totalCommision += productB.commision;
+  }
+
+  totalCommEl.textContent = `$ ${totalCommision}`;
 }
