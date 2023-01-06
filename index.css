@@ -17,10 +17,49 @@ html, body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: #44354A;
+    background: #201A23;
+    align-items: center;
 }
 
 img {
     border-radius: 50%;
     width: 200px;
+    border: 10px solid #44354A;
 }
+
+button {
+    margin: 20px 0 0 10px;
+    border-radius: 10px;
+    border: none;
+    width: 190px;
+    height: 80px;
+    background: #9E4770;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #743854;
+}
+
+.counter {
+    width: 60%;
+    padding: 10px;
+    background-color: #44354A;
+    border-radius: 50px;
+}
+
+.financials {
+    display: flex;
+    gap: 40px;
+}
+
+.financial-counter {
+    background-color: #44354A;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
