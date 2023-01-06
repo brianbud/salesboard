@@ -14,21 +14,25 @@ let productB = {
 
 let salesEl = document.getElementById('sales-counter');
 let totalSalesEl = document.getElementById('total-sales');
+let achieveEl = document.getElementById('achieve-counter');
+let totalAchieveEl = document.getElementById('total-achievement');
 let totalRevenueEl = document.getElementById('revenue');
 let totalCommEl = document.getElementById('comission');
 
 let totalSales = 0;
 let totalRevenue = 0;
 let totalCommision = 0;
+let totalAchievement = 0;
 let productASales = [];
 let productBSales = [];
+let achievements = [];
 
 function renderNewSale() {
   addRevenue();
   updateTotalSales();
   addToCounter();
   addCommission();
-  console.log(event.target.id);
+  CheckForAchievement();
 }
 
 function addToCounter() {
@@ -64,4 +68,22 @@ function addCommission() {
   }
 
   totalCommEl.textContent = `$ ${totalCommision}`;
+}
+
+function CheckForAchievement() {
+  totalAchievement += 1;
+
+  if (totalAchievement === 1) {
+    achievements.push('🔔');
+    achieveEl.textContent += '🔔';
+    totalAchieveEl.textContent = achievements.length;
+  } else if (totalSales === 15) {
+    achievements.push('🏆');
+    achieveEl.textContent += '🏆';
+    totalAchieveEl.textContent = achievements.length;
+  } else if (totalRevenue >= 2500 && !achievements.includes('💰')) {
+    achievements.push('💰');
+    achieveEl.textContent += '💰';
+    totalAchieveEl.textContent = achievements.length;
+  }
 }

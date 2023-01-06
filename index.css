@@ -15,7 +15,7 @@ html, body {
 
 .container {
     color: white;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     background: #201A23;
@@ -44,6 +44,7 @@ button:hover {
 }
 
 .counter {
+    height: 20px;
     width: 60%;
     padding: 10px;
     background-color: #44354A;
