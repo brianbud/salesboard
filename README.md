@@ -3,9 +3,10 @@
 A salesboard app to track the number of sales, achivements, as well as total revenue and comission.
 
 Achievement conditions:
-🔔 --> first sale of the day; no zero/red day for the rep.
-💰 --> sold more than $2500 worth of products.
-🏆 --> sold 15 products.
+
+- 🔔 --> first sale of the day; no zero/red day for the rep.
+- 💰 --> sold more than $2500 worth of products.
+- 🏆 --> sold 15 products.
 
 **Link to project:** https://salesboard.netlify.app/
 
