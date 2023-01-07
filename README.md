@@ -7,7 +7,7 @@ Achievement conditions:
 💰 --> sold more than $2500 worth of products.
 🏆 --> sold 15 products.
 
-**Link to project:**
+**Link to project:** https://salesboard.netlify.app/
 
 ![salesboard that displays the following: 2 products to select, a progress bar for the number of sales and achivements, and a display for the total revenue and commision ](./images/salesboard.gif)
 
