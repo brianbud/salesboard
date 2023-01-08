@@ -50,11 +50,11 @@ button:hover {
 }
 
 .counter {
-    min-height: 20px;
-    min-width: 20%;
-    padding: 10px;
+    min-width: 50%;
+    padding: 20px;
     background-color: #44354A;
     border-radius: 50px;
+    margin: 0 40px;
 }
 
 .financials {
